@@ -1,4 +1,5 @@
 {
+	"private":true,
   "name": "ergo-skel",
   "version": "0.0.1",
   "description": "A skeleton website layout for ergo-cms",
