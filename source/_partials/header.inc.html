@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{!:longtitle}{title}{end}{longtitle}</title>
+{if:metadesc}<meta name="description" content="{metadesc}" />{end}
+{if:metakeys}<meta name="keywords" content="{metakeys}" />{end}
+<link href="/styles.css" rel="stylesheet" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="News &amp; Articles Feed" href="/rss.xml" />
+<meta name="viewport" content="width=device-width,maximum-scale=1.0" />
+<meta property="author" content="{author}" />
+<!-- 
+					 ____  ____   ___   __         ___  _  _  ____ 
+					(  __)(  _ \ / __) /  \  ___  / __)( \/ )/ ___)
+					 ) _)  )   /( (_ \(  O )(___)( (__ / \/ \\___ \
+					(____)(__\_) \___/ \__/       \___)\_)(_/(____/
+-->
+</head>
+<body>
+	<!-- The 'extracss' has been added here -->
+<div id="banner" class="s {extracss}">
+	<div id="nav">
+	<!-- change your menu at _partials/menu.tex -->
+	{snippet:menu}
+	</div>
+	<h1 id="title"><a href="#content">{!:longtitle}{title}{end}{longtitle}</a></h1>
+</div>
+<div class="s">
+	<div class="c">
+		<div id="content">
+

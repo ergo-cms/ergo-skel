@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+ <loc>{base_url}/</loc>
+ <changefreq>daily</changefreq>
+ <priority>1.0</priority>
+</url>
+<url>
+ <loc>{base_url}/about.html</loc>
+ <changefreq>weekly</changefreq>
+ <priority>0.1</priority>
+</url>
+<url>
+ <loc>{base_url}/blog.html</loc>
+ <changefreq>daily</changefreq>
+ <priority>1.0</priority>
+</url>
+{begin:all escape}
+<url>
+ <loc>{base_url}/{seo}</loc>
+ <changefreq>weekly</changefreq>
+ <priority>0.1</priority>
+</url>
+{endb}
+</urlset>

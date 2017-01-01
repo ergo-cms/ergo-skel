@@ -1,0 +1,25 @@
+{
+  "name": "ergo-skel",
+  "version": "0.0.1",
+  "description": "A skeleton website layout for ergo-cms",
+  "main": "config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "view": "ergo view",
+    "build": "ergo build",
+    "deploy": "ergo deploy",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ergo-cms/ergo-skel.git"
+  },
+  "author": "cmroanirgo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ergo-cms/ergo-skel/issues"
+  },
+  "homepage": "https://github.com/ergo-cms/ergo-skel#readme",
+  "dependencies": {
+    "ergo-cli": "latest"
+  }
+}

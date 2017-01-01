@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>{title}</title>
+<description>Article Feed for {title}</description>
+<link>{base_url}/</link>
+<atom:link href="{base_url}/rss.xml" rel="self" type="application/rss+xml" />
+<ttl>720</ttl>
+{begin:all escape,count=10}
+<item>
+<title>{title}</title>
+<description>{!:content_short}{content}{end}{content_short}</description>
+<link>{base_url}/{seo}</link>
+<guid isPermaLink="false">{!:guid}{seo}{end}{guid}</guid>
+<pubDate>{date.rfc822}</pubDate>
+</item>
+{endb}
+</channel>
+</rss>
