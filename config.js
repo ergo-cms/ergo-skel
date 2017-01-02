@@ -10,7 +10,7 @@ module.exports = {
 	  //
 	  // Uncomment this in order to use rsync
 	//, rsync: { user: "username", host: "demosite.example.com", port: 22, dir: "/home/username/public_html" }, 
-.
+
 	//
 	// These are default fields used by the simple templating engine, but can be overridden in each file
 	, default_fields: {
@@ -22,8 +22,8 @@ module.exports = {
 	, default_post_type: "article"
 	, post_types: {
 		blog: {
-			path: "blog"
-			item_template: "blogentry.tem.html"
+			  path: "blog"
+			, item_template: "blogentry.tem.html"
 		  }
 		, article: {
 			  path: "article"
