@@ -1,0 +1,35 @@
+{
+date:"2012-06-22",
+title: "True Love's Second Kiss",
+metakeys:"second post,ergo-cms",
+extracss:"blogpost custom_post",
+metadesc:"A rambling second post with more detail about this ergo-cms skeleton.",
+disq_name:"{your_disqus_username}", // This is hacked in here to try & bypass the tagging engine (it doesn't have an escape mechanism)
+disq_uri:"{uri}",
+disq_site:"{site_url}",
+}
+
+p<>. This is the second post in ergo-cms. This was written in textile. It is the second post, because of the date. As indicated in the "first post":/blog/a-first-post.html, the header is now slightly different.
+
+p<>. The good thing about textile, is that it can be a lot easier to be more creative, espcially when it comes to styling, without needing to drop completely to html (which you can still do, of course). For instance, all the paragraphs in this page have been marked to be fully justified (as you can see). If you'd like to learn more about textile, then please visit "txstyle.org/":https://txstyle.org/. 
+
+p<>. Perhaps you've noticed "Disqus":http://disqus.com trying to load at the bottom of the blog pages. Don't worry, this is expected! You can see where this is done by opening @_layouts/blog.html@ in a text editor. In it, you'll notice that the tagging engine of ergo-cms can work with script tags without a problem:
+
+
+
+bc. <script type="text/javascript">
+	var disqus_shortname = '{disq_name}';
+	var disqus_identifier = '{disq_uri}';
+	var disqus_url = '{disq_site}/{disq_uri}';
+	...
+</script>
+
+p<>. Note how the @your_disqus_username@ and @site_url@ can be found in your @config.ergo.js@ file, and the @uri@ field is automatically generated. All fields can be overridden by adding them to the header area of this file's page, in @blog/a second post.tex@, just like the @extracss@ field:
+
+bc. {
+...
+extracss:"blogpost custom_post",
+...
+}
+
+

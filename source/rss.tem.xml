@@ -3,17 +3,17 @@
 <channel>
 <title>{title}</title>
 <description>Article Feed for {title}</description>
-<link>{base_url}/</link>
-<atom:link href="{base_url}/rss.xml" rel="self" type="application/rss+xml" />
+<link>{site_url}</link>
+<atom:link href="{site_url}rss.xml" rel="self" type="application/rss+xml" />
 <ttl>720</ttl>
-{begin:all escape,count=10}
+{begin:blog escape:true,count:10}
 <item>
+<link>{site_url}{uri}</link>
+<guid isPermaLink="{!:guid}false{else}true{end}">{!:guid}{uri}{else}{guid}{end}</guid>
+<pubDate>{date.atom}</pubDate>
 <title>{title}</title>
-<description>{!:content_short}{content}{end}{content_short}</description>
-<link>{base_url}/{seo}</link>
-<guid isPermaLink="false">{!:guid}{seo}{end}{guid}</guid>
-<pubDate>{date.rfc822}</pubDate>
+<description>{!:content_short}{content}{else}{content_short}{end}</description>
 </item>
-{endb}
+{end:blog}
 </channel>
 </rss>

@@ -2,7 +2,7 @@
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr,
 acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, 
 sub, sup, tt, var, fieldset, form, label, legend,  table, caption, tbody, tfoot, thead, tr, th, td  
-	{ margin: 0; padding: 0; border: 0; outline: 0; font-family: inherit; }
+	{ margin: 0; padding: 0; border: 0; outline: 0; }
 :focus { outline: 0; }
 table { border-collapse: separate; border-spacing: 0; }
 img { -ms-interpolation-mode: bicubic; }
@@ -65,7 +65,7 @@ h1 a:visited,h2 a:visited,h3 a:visited,h4 a:visited{color:#333;}
 #banner #nav a{ color:#333; font-size:1em;font-weight:normal;padding:1.0em 1em;border-left:1px solid rgba(0,0,0,0.2);margin-left:-1px}
 #banner #nav a:hover{background-color:rgba(0,0,0,0.2);}
 #banner #title { position:absolute;bottom:0.2em;right:15%;display:inline;max-width:50%;text-align:right}
-#banner #title a { font-weight:normal;line-height:1em; padding:0.2em 0; text-shadow: 0.005em 0.005em .2em #000;}
+#banner #title a { font-weight:normal;line-height:1em; padding:0.2em 0; text-shadow: 0.005em 0.005em .2em rgba(0,0,0,0.5);}
 #banner #title a:hover { color:#eee;text-decoration:none}
 
 
@@ -77,37 +77,25 @@ body {
   flex: 1;
 }
 
-#content { font-size:14.3pt; margin-top:2em; }
+#content { font-size:14.3pt; margin-top:2em;  margin-bottom:2em;}
 #content p {margin:0.8em 0; }
 #content img {padding:0 0.8em;}
 
-
-#content .dropcap p:first-of-type {text-indent: -1em}
-#content .dropcap p:first-of-type:first-letter { font-family: 'Slabo 27px', Georgia, serif;
-						font-size: 3.3em; font-weight: bold; vertical-align: text-top;
-						margin-bottom:1.2em;}
-
-#content .hang { text-indent:-2em; margin-left:2em;display:inline-block;max-width:70%;position:relative;left:15%}
-#content .hang p { margin-bottom:0 } /* goes with class .br */
-#content .hang p:first-of-type { margin-bottom:0.2em;}
-#content .hang p:first-of-type:first-letter { font-family: 'Slabo 27px', Georgia, serif; 
-						font-size: 3em; font-weight: bold; vertical-align: text-top;}
-
-#content .br { margin-top:0 !important;margin-bottom:0 !important;} /* class="br" */
-#content .indent { text-indent:2em; }
 
 #content dt { margin-top: 0.5em;}
 #content dt:before {content:"\2022\20";} /* bullet & space */
 #content dd { font-style: italic; margin-bottom:0.4em;font-size:0.9em;}
   
-#footer { background-color:#aaa;color:#222;margin-top: auto}
-#footer .c {text-align:center; font-size:0.8em; padding:0.5em 0;}
+#footer { background-color:#aaa;color:#222;margin-top: auto; font-family: "Lucida Console", Monaco, monospace}
+#footer .c {text-align:center; font-size:0.9em; padding:0.5em 0;}
 #footer { border-top:1px solid #888 }
 
 
 .more {font-style:italic;}
 .post { margin-top:2em; } /* used on lists of articles & blogs */
 
+pre { background-color:#ddd; padding:1em 1em; border:1px solid #ccc; white-space: pre-wrap; }
+code {background-color:#ddd; padding: 0.05em 0.4em; font-family: "Lucida Console", Monaco, monospace; font-size:0.8em;}
 .blogpost { background-color:#ffa;}
-.2ndpost { background-color:#aff;}
+.custom_post { background-color:#afa;}
 .aboutpage { background-color: #aaf}

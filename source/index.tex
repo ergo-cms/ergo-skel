@@ -1,26 +1,55 @@
 {
+title:"Welcome",
 metadesc: "This is a demo meta description entry",
 metakeys: "demo,demo keys",
+tags:"freedom"
 }
 
 
-h1. Welcome
+If you are reading this for the first time: _Welcome to ergo-cms!_ Your first step to understanding where to get started will be to browse these files in a explorer/finder window. But first, you may want to read this in a browser (if you aren't already).
 
-If you are reading this for the first time, then welcome to ergo-cms. Your first step to understanding where to get started will be to browse these files in a explorer/finder window. 
+If you are not yet viewing this page in a browser window, try running:
 
-If you are not yet viewing this page in a browser window, then perhaps you'd care to try running:
+bc. ergo view
 
-code. ergo view
+But, if you didn't install ergo globally, that's ok. Try running this instead:
 
-If you didn't install ergo globally, that's ok. Try running this instead:
+bc. npm run view
 
-code. npm run view
-
-
-Now you may open your browser (as indicated in the command line) at "$":http://localhost:8181. To be taken to the 'live' version of this page.
+If everything went well, you can open your browser at "http://localhost:8181":http://localhost:8181/, to be taken to the 'live' version of this page. If however, you ran into problems, then skip down to the "Installation":#install section, below
 
 Then, when you're ready to launch, go the "first blog post":/blog/a-first-post.html.
 
-You may also care to check out the "bootstrap":http://getbootstrap.com/ version of these files, to show how adaptable this all is. Simply download or clone from: "$":https://github.com/ergo-cms/ergo-skel-bootstrap and then 'npm run view' as before.
+You may also care to check out the "bootstrap":http://getbootstrap.com/ version of these files, to show how adaptable this all is. Simply download or clone from "ergo-cms/ergo-skel-bootstrap":https://github.com/ergo-cms/ergo-skel-bootstrap and then 'npm run view' as before.
+
+h2(#install). Installation
+
+If you've simply cloned or unzipped this skeleton file from "github":https://github.com/ergo-cms, don't worry, we can get you up and running. You have a choice to make unfortunately: _local_ or _global_ installation?
+
+A _local_ installation is a simple choice, as it is very simple to do. Simply type:
+
+bc. npm install
+
+...from within the skeleton directory. From here on, if you ever see the command @ergo [command] [options]@, you can simply replace it with @npm run [command] -- [options]@ to acheive similar results. Note that the @--@ is important (but you'll quickly notice it if you forget!)
+
+A _global_ installation takes up exactly the same amount of room on your hard drive. 
+
+bc. npm install ergo-cli -g
+
+In some instances, you may need to run the command as 'root':
+
+bc. sudo npm install ergo-cli -g
+
+The benefit of a _global_ installation is mainly if you are authoring more than one website. You don't need to call @npm install@ inside each skeleton folder before using it -- it's ready immediately after unzipping/cloning it.
+
+You can also create new websites easily by typing:
+
+bc. ergo init [folder]
+
+And you will get this skeleton website. Use @ergo init --help@ to get a list of all the options in making a new website.
+
+Of course, when you're ready you can call @ergo build@ from _anywhere_ inside the folder structure of the website and if you want to view it, then type @ergo view --watch@ to start a mini-webserver. The @--watch@ parameter causes ergo to rebuild your website if you make changes, allowing you to see them in the browser, quickly!
+
+
 
 
