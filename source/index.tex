@@ -10,17 +10,24 @@ If you are reading this for the first time: _Welcome to ergo-cms!_ Your first st
 
 If you are not yet viewing this page in a browser window, try running:
 
-bc. ergo view
+bc. ergo build && ergo view
 
-But, if you didn't install ergo globally, that's ok. Try running this instead:
+If you didn't install ergo globally, that's ok. Simply, run this instead:
 
-bc. npm run view
+bc. npm install && npm run build && npm run view
 
-If everything went well, you can open your browser at "http://localhost:8181":http://localhost:8181/, to be taken to the 'live' version of this page. If however, you ran into problems, then skip down to the "Installation":#install section, below
+If everything went well, you can open your browser at "http://localhost:8181":http://localhost:8181/, to be taken to the 'live' version of this page. If however, you ran into problems, then skip down to the "Installation":#install section, below.
 
-Then, when you're ready to launch, go the "first blog post":/blog/a-first-post.html.
+Then, when you're ready for more, go the "first blog post":/blog/a-first-post.html.
 
-You may also care to check out the "bootstrap":http://getbootstrap.com/ version of these files, to show how adaptable this all is. Simply download or clone from "ergo-cms/ergo-skel-bootstrap":https://github.com/ergo-cms/ergo-skel-bootstrap and then 'npm run view' as before.
+You may also care to check out the "bootstrap":http://getbootstrap.com/ version of these files, to show how adaptable this all is. Simply download or clone from "ergo-cms/ergo-skel-bootstrap":https://github.com/ergo-cms/ergo-skel-bootstrap and then @ergo build && ergo view@.
+
+If you're planning to do some editing of your files (whether it's writing new articles, or editing a stylesheets, or javascript), you might want to enable _'Watch Mode'_:
+
+bc. ergo build && ergo view --watch
+
+Ergo will now automatically rebuild when changes in the source folder are detected. (If you're running the _local_ version, then type @npm run build && npm run view -- --watch@. Note the extra @--@!)
+
 
 h2(#install). Installation
 
@@ -30,26 +37,29 @@ A _local_ installation is a simple choice, as it is very simple to do. Simply ty
 
 bc. npm install
 
-...from within the skeleton directory. From here on, if you ever see the command @ergo [command] [options]@, you can simply replace it with @npm run [command] -- [options]@ to acheive similar results. Note that the @--@ is important (but you'll quickly notice it if you forget!)
+...from within the skeleton directory. From here on, if you ever see the command @ergo [command] [options]@, you can simply replace it with @npm run [command] -- [options]@ to achieve similar results. Note that the @--@ is important (but you'll quickly notice it if you forget!)
 
 A _global_ installation takes up exactly the same amount of room on your hard drive. 
 
 bc. npm install ergo-cli -g
 
-In some instances, you may need to run the command as 'root':
-
-bc. sudo npm install ergo-cli -g
+In some instances, you may need to run the command as the 'root' user: @sudo npm install ergo-cli -g@
 
 The benefit of a _global_ installation is mainly if you are authoring more than one website. You don't need to call @npm install@ inside each skeleton folder before using it -- it's ready immediately after unzipping/cloning it.
 
-You can also create new websites easily by typing:
 
-bc. ergo init [folder]
+h2. Quick Commands
 
-And you will get this skeleton website. Use @ergo init --help@ to get a list of all the options in making a new website.
+ergo has a simple command set. If you ever wish to explore, just type @ergo --help@. If you want more info on a particular command (eg 'view') then type @ergo view --help@.
 
-Of course, when you're ready you can call @ergo build@ from _anywhere_ inside the folder structure of the website and if you want to view it, then type @ergo view --watch@ to start a mini-webserver. The @--watch@ parameter causes ergo to rebuild your website if you make changes, allowing you to see them in the browser, quickly!
+h3. ergo build
+
+When you're ready you can call @ergo build@ from _anywhere_ inside the folder structure of the website. 
 
 
+h3. ergo view
 
+@ergo view@ allows you to browse your website from a local web server.
+
+If you will be making changes to the @source@ folder, then you might want to run @ergo view --watch@ instead. The @--watch@ parameter causes ergo to rebuild your website if you make changes, allowing you to see them in the browser, quickly! Note also that @-w@ is shorthand for @--watch@, so you can actually type @ergo view -w@.
 

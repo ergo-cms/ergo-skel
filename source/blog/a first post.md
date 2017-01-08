@@ -12,15 +12,15 @@ Both `blog.html` and `page.html` can be found in the '_layouts' folder and both 
 
 
 ```
-{include:header.inc.html}
-{content}
-{include:footer.inc.html}
+include:header.inc.html
+content
+include:footer.inc.html
 ```
 
 Note, that the blog entry layout also does something interesting: it specifies a parameter to the included `header.inc.html`:
 
 ```
-{include:header.inc.html extracss:'blogpost'}
+include:header.inc.html extracss:'blogpost'
 ```
 
 What this does is add a default value for the `extracss` field, but only for blog posts. Our [second page](/blog/a-second-post.html) will deliberately overwrite that default value, with something else, as well as describing more features about the blog post layout.

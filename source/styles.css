@@ -23,7 +23,7 @@ a:visited {color:#822;}
 p {line-height:1.6em;}
 #content p { }
 
-h1, h2, h3, h4  { font-family: serif; font-weight:normal;}
+h1, h2, h3, h4  { font-family: serif; font-weight:normal; margin-top:2em;}
 h1{font-size:1.8em; }
 h2{font-size:1.5em; font-style:italic; }
 h3{font-size:1.2em; font-weight:bold;}
@@ -96,6 +96,7 @@ body {
 
 pre { background-color:#ddd; padding:1em 1em; border:1px solid #ccc; white-space: pre-wrap; }
 code {background-color:#ddd; padding: 0.05em 0.4em; font-family: "Lucida Console", Monaco, monospace; font-size:0.8em;}
+pre>code { padding-left: 0; }
 .blogpost { background-color:#ffa;}
 .custom_post { background-color:#afa;}
 .aboutpage { background-color: #aaf}
