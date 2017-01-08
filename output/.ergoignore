@@ -1,0 +1,5 @@
+# This file is to give a small window of protection when 'ergo build --clean' is used.
+# Entries here will NOT be cleaned, however they may be OVERWRITTEN by files in the ergo source folder.
+# To ignore source files, put an .ergoignore into the source folder.
+# Alternatively, put files you wish to keep into the source folder -- if you can, of course.
+# Also be careful when using 'rsync ... --delete', that the files you wish to keep aren't removed from your remote host!

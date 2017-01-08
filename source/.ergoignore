@@ -1,0 +1,2 @@
+# files listed here will be ignored by ergo, as if they didn't exist.
+# by default '_partials' and '_layouts' folders have special treatment & shouldn't be listed here
