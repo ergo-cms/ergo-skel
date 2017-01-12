@@ -1,9 +1,10 @@
-{
-date:"2012-06-21",
-title: "True Love's First Kiss",
-metakeys:"first post,ergo-cms",
-metadesc:"An eloquent introduction to the files."
-}
+date=2 Jan 2017 8:00
+title=True Love's First Kiss
+metakeys=first post,ergo-cms
+metadesc=An eloquent introduction to the files.
+
+###
+
 This is the first post in ergo-cms. This was written in markdown.
 
 This page, because it exists in the 'blog' folder, will use the `blog.html` layout applied to it. You can see the configuration for this in `config.ergo.js`. This is completely arbitary, of course. If we move this blog post elesewhere, then it will revert to using the default post type, which is `page`, which uses the `page.html` layout.

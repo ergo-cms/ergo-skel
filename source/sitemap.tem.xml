@@ -15,13 +15,6 @@
  <changefreq>daily</changefreq>
  <priority>1.0</priority>
 </url>
-{begin:page escape:true}
-<url>
- <loc>{site_url}{uri}</loc>
- <changefreq>weekly</changefreq>
- <priority>0.1</priority>
-</url>
-{end:page}
 {begin:blog escape:true}
 <url>
  <loc>{site_url}{uri}</loc>
