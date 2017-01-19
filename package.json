@@ -6,6 +6,7 @@
   "main": "config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "ergo": "ergo",
     "view": "ergo view",
     "build": "ergo build",
     "deploy": "ergo deploy"

@@ -1,0 +1,23 @@
+date=2 Jan 2017 8:00
+title=First Post!
+metakeys=first post,ergo-cms
+metadesc=An eloquent introduction to the files.
+image = post.jpg
+###
+
+This is the first post in ergo-cms. 
+
+This page, because it exists in the @blog@ folder, will have the @post.html@ layout applied to it. You can see the configuration for this in @config.ergo.js@. This is completely arbitary, of course. If this file is moved elsewhere, then it will revert to using the default post type, @page@, which uses the @page.html@ layout. Note that the main homepage (@/index.tex@) uses the @homepage.html@ layout as a special layout.
+
+Both @page.html@ and @post.html@ can be found in the @_layouts@ folder of the current theme (eg @_themes/default/_layouts@) and have the same basic structure:
+
+{{=[[ ]]=}}
+
+bc. {{> header.inc.html}}
+{{{content}}}
+{{> footer.inc.html}}
+
+Happy blogging!
+
+[[={{ }}=]]
+

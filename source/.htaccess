@@ -1,0 +1,34 @@
+# disable the server signature
+ServerSignature Off
+
+# disable directory browsing
+Options -Indexes
+
+ErrorDocument 404 /err404.html
+
+#ExpiresActive On
+#ExpiresDefault A3600
+  
+# cache images and flash content for one month
+#<FilesMatch ".(flv|gif|jpg|jpeg|png|ico|swf)$">
+#Header set Cache-Control "max-age=2592000"
+#</FilesMatch>
+
+# cache text, css,font and javascript files for one week
+#<FilesMatch ".(js|css|ttf|woff|woff2|svg|eot)$">
+#Header set Cache-Control "max-age=604800"
+#</FilesMatch>
+
+# cache html & xml for an hour
+#<FilesMatch ".(html|xml)$">
+#Header set Cache-Control "proxy-revalidate"
+#</FilesMatch>
+
+# disable hotlinking
+#<IfModule mod_rewrite.c>
+#RewriteEngine on
+#RewriteCond %{HTTP_REFERER} !^$
+#RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?ergo.example.com [NC]
+#RewriteRule \.(jpg|jpeg|png|gif|epub|mobi|pdf)$ - [NC,F,L]
+#</IfModule>
+

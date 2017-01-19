@@ -58,7 +58,7 @@ h1 a:visited,h2 a:visited,h3 a:visited,h4 a:visited{color:#333;}
 
 
 
-#banner { box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.2); border-bottom: 1px solid #aaa; overflow:hidden; min-height:5em; }
+#banner { background-size:cover; background-color:none; background-image:url(images/page.jpg), box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.2); border-bottom: 1px solid #aaa; overflow:hidden; min-height:5em; }
 #banner #nav {text-align:left;position:absolute;}
 #banner #nav ul {margin:1.0em 0 0 0;padding:0;list-style:none;display:inline-block;}
 #banner #nav li {margin:0;padding:0;float:left;display:inline;}
@@ -86,9 +86,16 @@ body {
 #content dt:before {content:"\2022\20";} /* bullet & space */
 #content dd { font-style: italic; margin-bottom:0.4em;font-size:0.9em;}
   
-#footer { background-color:#aaa;color:#222;margin-top: auto; font-family: "Lucida Console", Monaco, monospace}
+#footer { color:#222;margin-top: auto; font-family: "Lucida Console", Monaco, monospace;
+			border-top:1px solid #aaa; box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.2); }
 #footer .c {text-align:center; font-size:0.9em; padding:0.5em 0;}
-#footer { border-top:1px solid #888 }
+#footer #rss { margin-left:0.5em;padding:0 0.5em;}
+#footer #rss i { font-size:0.9em; }
+
+.social { margin:3em 0;}
+.social a { padding:0 10px; font-size:1.5em; vertical-align: middle}
+.social a:first-child { padding-left:0;}
+.social a:hover { text-decoration: none; color:#a66;}
 
 
 .more {font-style:italic;}
@@ -97,6 +104,45 @@ body {
 pre { background-color:#ddd; padding:1em 1em; border:1px solid #ccc; white-space: pre-wrap; }
 code {background-color:#ddd; padding: 0.05em 0.4em; font-family: "Lucida Console", Monaco, monospace; font-size:0.8em;}
 pre>code { padding-left: 0; }
-.blogpost { background-color:#ffa;}
-.custom_post { background-color:#afa;}
-.aboutpage { background-color: #aaf}
+#banner.home { min-height:12em; background-image:url(images/home.jpg)}
+#banner.home #title { font-size:4em; }
+
+
+/*
+Flaticon icon font: Flaticon
+Creation date: 19/01/2017 03:59
+*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("./flaticon/flaticon.eot");
+  src: url("./flaticon/flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./flaticon/flaticon.woff") format("woff"),
+       url("./flaticon/flaticon.ttf") format("truetype"),
+       url("./flaticon/flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./flaticon/flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+	font-family: Flaticon;
+	font-style: normal;
+}
+
+.flaticon-fb:before { content: "\f100"; }
+.flaticon-github:before { content: "\f101"; }
+.flaticon-google:before { content: "\f102"; }
+.flaticon-instagram:before { content: "\f103"; }
+.flaticon-linkedin:before { content: "\f104"; }
+.flaticon-pinterest:before { content: "\f105"; }
+.flaticon-rss:before { content: "\f106"; }
+.flaticon-twitter:before { content: "\f107"; }
+

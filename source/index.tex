@@ -2,57 +2,28 @@ title = Welcome
 metadesc = This is a demo meta description entry
 metakeys = demo,demo keys
 tags = freedom
+layout = homepage.html
 ###
 
-If you are reading this for the first time: _Welcome to ergo-cms!_ Your first step to understanding where to get started will be to browse these files in a explorer/finder window. But first, you may want to read this in a browser (if you aren't already).
-
-If you are not yet viewing this page in a browser window, try running:
-
-bc. ergo build && ergo view
-
-If you didn't install ergo globally, that's ok. Simply, run this instead:
-
-bc. npm install && npm run build && npm run view
-
-If everything went well, you can open your browser at "http://localhost:8181":http://localhost:8181/, to be taken to the 'live' version of this page. If however, you ran into problems, then skip down to the "Installation":#install section, below.
-
-Then, when you're ready for more, go the "first blog post":/blog/a-first-post.html.
-
-You may also care to check out the "bootstrap":http://getbootstrap.com/ version of these files, to show how adaptable this all is. Simply download or clone from "ergo-cms/ergo-skel-bootstrap":https://github.com/ergo-cms/ergo-skel-bootstrap and then @ergo build && ergo view@.
-
-If you're planning to do some editing of your files (whether it's writing new articles, or editing a stylesheets, or javascript), you might want to enable _'Watch Mode'_:
-
-bc. ergo build && ergo view --watch
-
-Ergo will now automatically rebuild when changes in the source folder are detected. (If you're running the _local_ version, then type @npm run build && npm run view -- --watch@. Note the extra @--@!)
+Welcome to your new installation of ergo-cms.
 
 
-h2(#install). Installation
+h2. Getting Oriented
 
-If you've simply cloned or unzipped this skeleton file from "github":https://github.com/ergo-cms, don't worry, we can get you up and running. You have a choice to make unfortunately: _local_ or _global_ installation?
-
-A _local_ installation is a simple choice, as it is very simple to do. Simply type:
-
-bc. npm install
-
-...from within the skeleton directory. From here on, if you ever see the command @ergo [command] [options]@, you can simply replace it with @npm run [command] -- [options]@ to achieve similar results. Note that the @--@ is important (but you'll quickly notice it if you forget!)
-
-A _global_ installation takes up exactly the same amount of room on your hard drive. 
-
-bc. npm install ergo-cli -g
-
-In some instances, you may need to run the command as the 'root' user: @sudo npm install ergo-cli -g@
-
-The benefit of a _global_ installation is mainly if you are authoring more than one website. You don't need to call @npm install@ inside each skeleton folder before using it -- it's ready immediately after unzipping/cloning it.
+# Edit @config.ergo.js@ to change configuration and basic set up parameters, such as site name, site url and social media usernames.
+# To help you get started, we've added a couple of pages to this skeleton file, which are located in the @source@ folder. Feel free to delete/rename them them as you see fit. 
+Anything in the @source@ folder will be processed and copied to the output folder. For example, this file, @index.tex@ will become @index.html@ in the @output@ folder once it is built.
+# If you want to change the menu at the top, please edit @_partials/menu.tex@. You can also change @_partials/footer_text.tex@ to change the footer too.
+# If you don't want to use textile, but prefer Markdown: simply change the extensions of these files to @.md@ after reformatting according to markdown. Nothing else needs to be done. 
 
 
 h2. Quick Commands
 
-ergo has a simple command set. If you ever wish to explore, just type @ergo --help@. If you want more info on a particular command (eg 'view') then type @ergo view --help@.
+ergo has a simple command set. If you ever wish to explore, just type @ergo --help@. If you want more info on a particular command (eg 'view') then type @ergo view --help@. If you didn't install ergo globally, then you can type in @npm run ergo -- --help@ or @npm run ergo -- view --help@ instead.
 
 h3. ergo build
 
-When you're ready you can call @ergo build@ from _anywhere_ inside the folder structure of the website. 
+When you're ready you can call @ergo build@ from _anywhere_ inside the folder structure of the website and the resulting static website will be created in the @output@ folder.
 
 
 h3. ergo view
@@ -61,3 +32,10 @@ h3. ergo view
 
 If you will be making changes to the @source@ folder, then you might want to run @ergo view --watch@ instead. The @--watch@ parameter causes ergo to rebuild your website if you make changes, allowing you to see them in the browser, quickly! Note also that @-w@ is shorthand for @--watch@, so you can actually type @ergo view -w@.
 
+h2. Changing themes
+
+If you've already downloaded a theme, you can change to it by editing your @config.ergo.js@ file. 
+
+Otherwise, you can download and install most themes easily with @ergo theme install theme-name@. Please note, that you may need to make some changes to your settings and files to get the theme to work. The theme will have a README file of it's own which can guide you in the steps to take. 
+
+When you are ready, run @ergo build --clean@ to make the switch official!
