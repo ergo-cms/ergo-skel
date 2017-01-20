@@ -12,17 +12,23 @@
 		{{#social.github}}<a href="https://github.com/{{{social.github}}}"><i class="flaticon-github"></i></a>{{/social.github}}
 	</div>
 </div>
-{{{#social.disqus}}}
-<div id="disqus_thread"></div>
+{{#social.disqus}}
+<div id="disqus_thread"><a href="#" onclick="return disqus();" id="show_comments">Show Comments</a> </div>
 <script type="text/javascript">
+	var disqus_loaded = false;
 	var disqus_shortname = '{{{social.disqus}}}';
 	var disqus_identifier = '{{{uri}}}';
-	var disqus_url = '{{{site_url}}{{{uri}}';
-	(function() {
+	var disqus_url = '{{site_url}}{{uri}}';
+	function disqus() {
+		if (disqus_loaded) 
+			return false;
+		disqus_loaded = true;
+		if (disqus_shortname=='username') alert("You need to change the disqus username in config.ergo.js for this to work correctly")
 		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
 		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-	})();
+		return false;
+	}
 </script>
-{{{/social.disqus}}}
+{{/social.disqus}}
 {{> footer.inc.html}}

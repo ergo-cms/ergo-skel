@@ -83,8 +83,9 @@ body {
 
 
 #content dt { margin-top: 0.5em;}
-#content dt:before {content:"\2022\20";} /* bullet & space */
 #content dd { font-style: italic; margin-bottom:0.4em;font-size:0.9em;}
+#content .meta { font-size:0.8em;margin-left:1em;}
+#content hr { border:none; height:1px; background-color:rgba(0,0,0,0.2);width:80%}
   
 #footer { color:#222;margin-top: auto; font-family: "Lucida Console", Monaco, monospace;
 			border-top:1px solid #aaa; box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.2); }
@@ -96,6 +97,7 @@ body {
 .social a { padding:0 10px; font-size:1.5em; vertical-align: middle}
 .social a:first-child { padding-left:0;}
 .social a:hover { text-decoration: none; color:#a66;}
+#disqus_thread #show_comments { padding:0.5em 2em; display:block; border:1px solid rgba(0,0,0,0.2); text-align: center;}
 
 
 .more {font-style:italic;}

@@ -8,7 +8,7 @@ module.exports = {
 	// These are fields used by the theme
 	default_fields: {
 		site_url: "http://ergo.example.com/", // ALWAYS end with a '/'
-		site_title: "Ergo",
+		site_title: "Your Site",
 		post_image: "/img/post-bg.jpg",
 		title: "An ergo-cms skeleton", // this goes in <title>tags generally, but also used in rss 
 		author: "Demo Author",
@@ -24,7 +24,12 @@ module.exports = {
 		}
 	},
 
-	theme: "default", //sbs_clean_blog"
+	verbose:1,
+	log_options: {
+	 	//match_file: /menu/
+	},
+
+	theme: "sbs_clean_blog" ,// default", //sbs_clean_blog"
 	plugin_options: {
 		// textile: { breaks:false}
 	},
