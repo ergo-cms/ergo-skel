@@ -8,12 +8,12 @@ module.exports = {
 	// These are fields used by the theme
 	default_fields: {
 		site_url: "http://ergo.example.com/", // ALWAYS end with a '/'
-		site_title: "Your Site",
-		post_image: "/img/post-bg.jpg",
+		site_title: "Your Site", // a short title
 		title: "An ergo-cms skeleton", // this goes in <title>tags generally, but also used in rss 
+		post_image: "/img/post-bg.jpg",
 		author: "Demo Author",
 
-		social: {	// update/remove social entries that you don't use
+		social: {	// update/remove social entries that you use
 			disqus: 'username',
 			twitter: 'username',
 			linkedin: 'username',
@@ -24,12 +24,7 @@ module.exports = {
 		}
 	},
 
-	verbose:1,
-	log_options: {
-	 	//match_file: /menu/
-	},
-
-	theme: "sbs_clean_blog" ,// default", //sbs_clean_blog"
+	theme: "ergo_simple",
 	plugin_options: {
 		// textile: { breaks:false}
 	},
