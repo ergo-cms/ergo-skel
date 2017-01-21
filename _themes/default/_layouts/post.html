@@ -23,7 +23,7 @@
 		if (disqus_loaded) 
 			return false;
 		disqus_loaded = true;
-		if (disqus_shortname=='username') alert("You need to change the disqus username in config.ergo.js for this to work correctly")
+		{{if  social.disqus == 'username' }}alert("You need to change the disqus username in config.ergo.js for this to work correctly. This message will be removed when completed"){{endif}}
 		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
 		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
