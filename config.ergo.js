@@ -24,7 +24,7 @@ module.exports = {
 		}
 	},
 
-	theme: "ergo_simple",
+	theme: "ergo-simple",
 	plugin_options: {
 		// textile: { breaks:false}
 	},
