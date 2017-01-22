@@ -14,7 +14,7 @@ h2. Getting Oriented
 # Edit @config.ergo.js@ to change configuration and basic set up parameters, such as site name, site url and social media usernames.
 # To help you get started, we've added a couple of pages to this skeleton file, which are located in the @source@ folder. Feel free to delete/rename them them as you see fit. 
 Anything in the @source@ folder will be processed and copied to the output folder. For example, this file, @index.tex@ will become @index.html@ in the @output@ folder once it is built.
-# If you want to change the menu at the top, please edit @_partials/menu.tex@. You can also change @_partials/footer_text.tex@ to change the footer too.
+# If you want to change the menu at the top, please edit @_partials/menu.tex@. You can also change @_partials/footer_text.html@ to change the footer too.
 # If you don't want to use textile, but prefer Markdown: simply change the extensions of these files to @.md@ after reformatting according to markdown. Nothing else needs to be done. 
 
 
@@ -24,14 +24,16 @@ ergo has a simple command set. If you ever wish to explore, just type @ergo --he
 
 h3. ergo build
 
-When you're ready you can call @ergo build@ from _anywhere_ inside the folder structure of the website and the resulting static website will be created in the @output@ folder.
+When you're ready you can call @ergo build@ from _anywhere_ inside the folder structure of the website and the resulting static website will be created in the @output@ folder. If you want to 'clean' the output folder, for doing a rebuild, use @ergo build --clean@
 
 
 h3. ergo view
 
 @ergo view@ allows you to browse your website from a local web server.
 
-If you will be making changes to the @source@ folder, then you might want to run @ergo view --watch@ instead. The @--watch@ parameter causes ergo to rebuild your website if you make changes, allowing you to see them in the browser, quickly! Note also that @-w@ is shorthand for @--watch@, so you can actually type @ergo view -w@.
+If you will be making changes to the @source@ folder, then you might want to run @ergo view --watch@ instead. The @--watch@ parameter causes ergo to rebuild your website if you make changes, allowing you to see them in the browser, quickly! Note also that @-w@ is shorthand for @--watch@, so you can actually type @ergo view -w@. 
+
+You can also build at the same time as starting up with: @ergo view -b -w@
 
 h2. Changing themes
 
