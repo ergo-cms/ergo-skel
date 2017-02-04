@@ -38,8 +38,7 @@ ergo has a simple command set. If you ever wish to explore, just type @ergo --he
 
 h3. ergo build
 
-When you're ready you can call @ergo build@ from _anywhere_ inside the folder structure of the website and the resulting static website will be created in the @output@ folder. If you want to 'clean' the output folder, for doing a rebuild, use @ergo build --clean@
-
+When you're ready you can call @ergo build@ from _anywhere_ inside the folder structure of the website and the resulting static website will be created in the @output@ folder. If you want to 'clean' the output folder, for doing a rebuild, use @ergo build --clean@. Note that ergo cms will only update a file in the output folder if it has *actually* changed. 
 
 h3. ergo view
 
@@ -47,13 +46,15 @@ h3. ergo view
 
 If you will be making changes to the @source@ folder, then you might want to run @ergo view --watch@ instead. The @--watch@ parameter causes ergo to rebuild your website if you make changes, allowing you to see them in the browser, quickly! Note also that @-w@ is shorthand for @--watch@, so you can actually type @ergo view -w@. 
 
-You can also build at the same time as starting up with: @ergo view -b -w@
+You can also build at the same time as starting up with: @ergo view -b -w@.
+
+Open your browser at "http://localhost:8181":http://localhost:8181 to see your website.
 
 h2. Changing themes
 
-If you've already downloaded a theme, you can change to it by editing your @config.ergo.js@ file. 
+If you've already downloaded a theme, you can change to it by editing your @config.ergo.js@ file, or your can type @ergo theme switch other-theme@. 
 
-Otherwise, you can download and install most themes easily with @ergo theme install theme-name@. Please note, that you may need to make some changes to your settings and files to get the theme to work. The theme will have a README file of it's own which can guide you in the steps to take. 
+Otherwise, you can download and install most themes easily with @ergo theme install theme-name@. Please note, that you may need to make some changes to your settings and files to get the theme to work. The theme will have a README file of it's own which can guide you in the steps to take, but in general, all officially supported themes are able to be switched for another without any extra work at all! 
 
 More themes are appearing all the time. Check out "ergo-cms themes":https://ergo-cms.github.io/themes for the latest official list.
 
