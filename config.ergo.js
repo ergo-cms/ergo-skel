@@ -10,7 +10,6 @@ module.exports = {
 		site_url: "http://ergo.example.com/", // ALWAYS end with a '/'
 		site_title: "Your Site", // a short title
 		title: "An ergo-cms skeleton", // this goes in <title>tags generally, but also used in rss 
-		post_image: "/img/post-bg.jpg",
 		image: "page.jpg", // the default image to use.
 		author_image: 'avatar.jpg', // in the /images/ folder
 		//author: "Demo Author", // The default author
