@@ -1,0 +1,69 @@
+title = Getting Started
+subtitle = Introduces some basic commands for ergo-cms
+date = 1 Jan 2017
+tags = blogging, information
+image = post1.jpg
+featured = 1
+popular = 1
+###
+
+This page is a quick intro into getting started with ergo-cms. It is recommended to read the articles on the "ergo-cms":https://ergo-cms.github.io website for more information.
+
+h2. Getting Oriented
+
+# Edit @config.ergo.js@ to change configuration and basic set up parameters, such as site name, site url and social media usernames.
+# To help you get started, we've added a couple of pages to this skeleton file, which are located in the @source@ folder. Feel free to delete/rename them them as you see fit. 
+Anything in the @source@ folder will be processed and copied to the output folder. For example, this file, @blog/getting started.tex@ will become @blog/getting-started.html@ in the @output@ folder once it is built.
+# If you want to change the menu at the top, please edit @_partials/menu.tex@. You can also change @_partials/footer_text.html@ to change the footer too.
+# If you don't want to use Textile, but prefer Markdown: simply change the extensions of these files to @.md@ after reformatting according to markdown. Nothing else needs to be done. 
+
+h3. Textile
+
+Textile is the default language of choice in ergo cms. We feel it's better suited to html authoring than Markdown. You can get more information about the syntax here:
+
+* "https://txstyle.org/":https://txstyle.org/
+* "http://redcloth.org/hobix.com/textile/":http://redcloth.org/hobix.com/textile/
+
+The package that ergo-cms uses is by "@borgar@":https://github.com/borgar/textile-js and is compatible with the RedCloth version of textile.
+
+Save your files as @.tex@ or @.textile@ to use textile formatting. 
+
+h3. Markdown
+
+Markdown is very popular for developers and is fully supported here by using the "@marked@ package":https://github.com/chjj/marked.
+
+h2. Quick Commands
+
+ergo has a simple command set. If you ever wish to explore, just type @ergo --help@. If you want more info on a particular command (eg 'view') then type @ergo view --help@. If you didn't install ergo globally, then you can type in @npm run ergo -- --help@ or @npm run ergo -- view --help@ instead.
+
+h3. ergo build
+
+When you're ready you can call @ergo build@ from _anywhere_ inside the folder structure of the website and the resulting static website will be created in the @output@ folder. If you want to 'clean' the output folder, for doing a rebuild, use @ergo build --clean@
+
+
+h3. ergo view
+
+@ergo view@ allows you to browse your website from a local web server.
+
+If you will be making changes to the @source@ folder, then you might want to run @ergo view --watch@ instead. The @--watch@ parameter causes ergo to rebuild your website if you make changes, allowing you to see them in the browser, quickly! Note also that @-w@ is shorthand for @--watch@, so you can actually type @ergo view -w@. 
+
+You can also build at the same time as starting up with: @ergo view -b -w@
+
+h2. Changing themes
+
+If you've already downloaded a theme, you can change to it by editing your @config.ergo.js@ file. 
+
+Otherwise, you can download and install most themes easily with @ergo theme install theme-name@. Please note, that you may need to make some changes to your settings and files to get the theme to work. The theme will have a README file of it's own which can guide you in the steps to take. 
+
+More themes are appearing all the time. Check out "ergo-cms themes":https://ergo-cms.github.io/themes for the latest official list.
+
+When you are ready, run @ergo build --clean@ to make the switch official!
+
+h2. Plugins
+
+Ergo-cms also comes with a range of helpful plugins, and more are being added constantly. Check out "ergo-cms plugins":https://ergo-cms.github.io/plugins for the latest official list.
+
+h2. Deploying
+
+Please check the "Deployment Guide":https://ergo-cms/github.io/articles/deploy.html for latest information on deployment to your webserver.
+

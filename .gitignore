@@ -1,5 +1,7 @@
 node_modules
-/_themes/sbs_clean_blog
+/_themes/clean-blog
+/_themes/future-imperfect
+/_plugins/
 /output/*
 !/output/.ergoignore
 

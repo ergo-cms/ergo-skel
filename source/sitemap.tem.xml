@@ -16,7 +16,7 @@
  <priority>1.0</priority>
 </url>
 {{#blog}}<url>
- <loc>{{{site_url}}{{{uri}}</loc>
+ <loc>{{site_url}}{{uri}}</loc>
  <changefreq>weekly</changefreq>
  <priority>0.1</priority>
 </url>

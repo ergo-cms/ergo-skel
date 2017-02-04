@@ -3,15 +3,15 @@
 <channel>
 <title>{{title}}</title>
 <description>Blog Feed for {{title}}</description>
-<link>{{{site_url}}}</link>
-<atom:link href="{{{site_url}}rss.xml" rel="self" type="application/rss+xml" />
+<link>{{site_url}}</link>
+<atom:link href="{{site_url}}rss.xml" rel="self" type="application/rss+xml" />
 <ttl>720</ttl>{{#blog @{len:10} }}
 <item>
 <link>{{site_url}}{{uri}}</link>
-<guid isPermaLink="{{^guid}}false{{else}}true{{/guid}}">{{^guid}}{{uri}}{{/guid}}{{guid}}</guid>
+<guid isPermaLink="false">{{uri}}</guid>
 <pubDate>{{date.rss}}</pubDate>
 <title>{{title}}</title>
-<description>{{^metadesc}}{{title}}{{/metadesc}}{{metadesc}}</description>
+<description>{{ metadesc || title}}</description>
 </item>{{/blog}}
 </channel>
 </rss>
